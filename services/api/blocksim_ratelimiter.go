@@ -119,10 +119,8 @@ func (b *BlockSimulationRateLimiter) Send(
 
 	// Create and fire off JSON-RPC request
 	if payload.Version == spec.DataVersionFulu {
-		log.Printf("BHARAT: in fulu block simulation")
 		simReq = jsonrpc.NewJSONRPCRequest("1", "flashbots_validateBuilderSubmissionV5", payload)
 	} else if payload.Version == spec.DataVersionElectra {
-		log.Printf("BHARAT: in electra block simulation")
 		simReq = jsonrpc.NewJSONRPCRequest("1", "flashbots_validateBuilderSubmissionV4", payload)
 	} else if payload.Version == spec.DataVersionDeneb {
 		simReq = jsonrpc.NewJSONRPCRequest("1", "flashbots_validateBuilderSubmissionV3", payload)
