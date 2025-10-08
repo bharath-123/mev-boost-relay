@@ -370,7 +370,7 @@ func (api *RelayAPI) getRouter() http.Handler {
 		r.HandleFunc(pathRegisterValidator, api.handleRegisterValidator).Methods(http.MethodPost)
 		r.HandleFunc(pathGetHeader, api.handleGetHeader).Methods(http.MethodGet)
 		r.HandleFunc(pathGetPayloadV1, api.handleGetPayloadV1).Methods(http.MethodPost)
-		r.HandleFunc(pathGetPayloadV2, api.handleGetPayloadV2).Methods(http.MethodPost)
+		// r.HandleFunc(pathGetPayloadV2, api.handleGetPayloadV2).Methods(http.MethodPost)
 	}
 
 	// Builder API
